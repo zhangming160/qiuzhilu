@@ -10,10 +10,10 @@ RUN npm install
 COPY . .
 
 # Build frontend
-RUN npx vite build
+RUN npx vite build && ls -la dist/
 
 # Expose port (Zeabur uses PORT env var)
-EXPOSE 3001
+EXPOSE 8080
 
 # Start the Express server (serves both API and static files)
 CMD ["node", "server/index.js"]
