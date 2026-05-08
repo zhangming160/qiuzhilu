@@ -1,0 +1,12 @@
+node_modules
+dist
+.vercel
+.DS_Store
+.env
+*.db
+server/data/app.db
+vite-start.*.log
+AI大赛脱敏数据.xlsx
+users.json
+resume_2
+.claude/settings.local.json

@@ -1,0 +1,4 @@
+node_modules
+.env
+AI大赛脱敏数据.xlsx
+vite-start.*.log
