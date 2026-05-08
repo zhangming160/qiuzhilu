@@ -120,7 +120,7 @@ const RegisterView = ({ avatarSeed, onRandom, onNext, onBack }) => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3001/api/register', {
+      const response = await fetch('/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -244,7 +244,7 @@ const LoginView = ({ onFinish, onBack }) => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3001/api/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -701,7 +701,7 @@ const AIAssistantPage = ({ avatarSeed }) => {
       const conversationHistory = messages.map(m => ({ role: m.role, content: m.content }));
       conversationHistory.push(userMessage);
 
-      const response = await axios.post('http://localhost:3001/api/chat', {
+      const response = await axios.post('/api/chat', {
         messages: conversationHistory
       });
 
@@ -1052,7 +1052,7 @@ const AnalysisReportPage = ({ onBack, userData }) => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/chat', {
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
